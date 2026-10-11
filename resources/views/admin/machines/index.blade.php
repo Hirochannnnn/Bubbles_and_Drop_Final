@@ -217,7 +217,9 @@
                                     <form
                                         method="POST"
                                         action="{{ route('admin.machines.destroy', $machine) }}"
-                                        onsubmit="return confirm('Delete this machine?');"
+                                        data-confirm-title="Delete this machine?"
+                                        data-confirm-button="Delete"
+                                        data-confirm-tone="danger"
                                     >
 
                                         @csrf

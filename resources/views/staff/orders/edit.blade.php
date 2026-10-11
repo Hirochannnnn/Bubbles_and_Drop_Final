@@ -666,11 +666,9 @@
                     class="rounded-xl bg-[#4f74d9]
                            px-6 py-3 text-sm font-bold
                            text-white transition hover:bg-[#3f63c8]"
-                    onclick="return confirm(
-                        'Start washing for {{ addslashes($customerName) }}?\n\n' +
-                        'Service No.: {{ addslashes($serviceNumber) }}\n\n' +
-                        'A washing section will be assigned automatically.'
-                    );"
+                    data-confirm-title="Start washing for {{ $customerName }}?"
+                    data-confirm="Service No.: {{ $serviceNumber }}&#10;A washing section will be assigned automatically."
+                    data-confirm-button="Start Washing"
                 >
                     Start Washing
                 </button>
@@ -700,11 +698,9 @@
                     class="rounded-xl bg-[#4f74d9]
                            px-6 py-3 text-sm font-bold
                            text-white transition hover:bg-[#3f63c8]"
-                    onclick="return confirm(
-                        'Proceed to Drying for {{ addslashes($customerName) }}?\n\n' +
-                        'Service No.: {{ addslashes($serviceNumber) }}\n\n' +
-                        'The laundry will move to the BOTTOM of {{ addslashes($assignedMachine?->machine_name ?? 'the assigned machine') }}.'
-                    );"
+                    data-confirm-title="Proceed to Drying for {{ $customerName }}?"
+                    data-confirm="Service No.: {{ $serviceNumber }}&#10;The laundry will move to the BOTTOM of {{ $assignedMachine?->machine_name ?? 'the assigned machine' }}."
+                    data-confirm-button="Proceed to Drying"
                 >
                     Proceed to Drying
                 </button>
@@ -734,11 +730,9 @@
                     class="rounded-xl bg-[#4f74d9]
                            px-6 py-3 text-sm font-bold
                            text-white transition hover:bg-[#3f63c8]"
-                    onclick="return confirm(
-                        'Proceed to Folding for {{ addslashes($customerName) }}?\n\n' +
-                        'Service No.: {{ addslashes($serviceNumber) }}\n\n' +
-                        'The machine will be released.'
-                    );"
+                    data-confirm-title="Proceed to Folding for {{ $customerName }}?"
+                    data-confirm="Service No.: {{ $serviceNumber }}&#10;The machine will be released."
+                    data-confirm-button="Proceed to Folding"
                 >
                     Proceed to Folding
                 </button>
@@ -768,11 +762,9 @@
                     class="rounded-xl bg-[#4f74d9]
                            px-6 py-3 text-sm font-bold
                            text-white transition hover:bg-[#3f63c8]"
-                    onclick="return confirm(
-                        'Mark this laundry as Ready for Pickup?\n\n' +
-                        'Customer: {{ addslashes($customerName) }}\n' +
-                        'Service No.: {{ addslashes($serviceNumber) }}'
-                    );"
+                    data-confirm-title="Mark this laundry as Ready for Pickup?"
+                    data-confirm="Customer: {{ $customerName }}&#10;Service No.: {{ $serviceNumber }}"
+                    data-confirm-button="Mark Ready"
                 >
                     Proceed to Ready for Pickup
                 </button>
@@ -804,12 +796,9 @@
                         class="rounded-xl bg-emerald-600
                                px-6 py-3 text-sm font-bold
                                text-white transition hover:bg-emerald-700"
-                        onclick="return confirm(
-                            'Confirm Laundry Claim\n\n' +
-                            'Customer: {{ addslashes($customerName) }}\n' +
-                            'Service No.: {{ addslashes($serviceNumber) }}\n\n' +
-                            'Is this the correct customer?'
-                        );"
+                        data-confirm-title="Confirm Laundry Claim"
+                    data-confirm="Customer: {{ $customerName }}&#10;Service No.: {{ $serviceNumber }}&#10;Is this the correct customer?"
+                    data-confirm-button="Confirm Claim"
                     >
                         Confirm Claim
                     </button>

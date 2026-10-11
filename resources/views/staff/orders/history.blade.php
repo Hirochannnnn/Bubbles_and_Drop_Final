@@ -213,11 +213,9 @@
                             <form
                                 method="POST"
                                 action="{{ route('staff.orders.undo-claim', $order) }}"
-                                onsubmit="return confirm(
-                                    'Undo claim for {{ addslashes($order->customer->full_name) }}?\n\n' +
-                                    'Service No.: {{ addslashes($order->service_number) }}\n\n' +
-                                    'This will return the laundry to Ready for Pickup.'
-                                );"
+                                data-confirm-title="Undo claim for {{ $order->customer->full_name }}?"
+                                data-confirm="Service No.: {{ $order->service_number }}&#10;This will return the laundry to Ready for Pickup."
+                                data-confirm-button="Undo Claim"
                                 class="inline"
                             >
 

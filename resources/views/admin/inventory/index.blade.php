@@ -570,7 +570,9 @@
 
                                         <button
                                             type="submit"
-                                            onclick="return confirm('Remove this inventory item?')"
+                                            data-confirm-title="Remove this inventory item?"
+                                            data-confirm-button="Remove"
+                                            data-confirm-tone="danger"
                                             class="px-3 py-2
                                                    bg-red-100
                                                    text-red-700
